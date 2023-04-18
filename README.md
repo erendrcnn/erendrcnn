@@ -14,4 +14,4 @@
 
 #
 
-[![](https://visitcount.itsvg.in/api?id=erendrcnn&label=Profile%20Views&color=5&icon=5&pretty=false)](https://visitcount.itsvg.in)
+[![](https://visitcount.itsvg.in/api?id=erendrcnn&label=Profile%20Views&color=5&icon=5&pretty=false)](https://github.com/erendrcnn/erendrcnn)
