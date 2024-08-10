@@ -1,9 +1,8 @@
 <h1 align="center">Hi 👋, I'm Eren</h1>
 <h3 align="center">Computer Engineering Senior Student at TOBB ETU</h3>
 
-- 🌱 I’m currently both a student and a part-time engineer.
-- 👨🏽‍💻 I'm training as a long-term intern at ‎‎<a href="https://www.arcelikglobal.com/" target="_blank" rel="noreferrer"> <img src="https://github.com/erendrcnn/erendrcnn/assets/70805475/052897c9-6480-4238-b4b8-0cbdddeaad58" alt="intern" width="45" height="16"/>
-
+- 🌱 I'm currently a student and improving myself.
+- 👨🏽‍💻 I also work part-time as an RPA Developer at ‎‎<a href="https://www.bekocorporate.com/" target="_blank" rel="noreferrer"> <img src="https://github.com/user-attachments/assets/ae7defc8-4d92-42df-be77-872fe29fcfcc" alt="Beko" width="30" height="20"/>
 
 
 <h3 align="left">Connect with me:</h3>
