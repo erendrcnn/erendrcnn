@@ -1,17 +1,287 @@
-<h1 align="center">Hi 👋, I'm Eren</h1>
-<h3 align="center">Computer Engineering Student at TOBB ETU</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eren Durucan | Developer Portfolio</title>
+  <style>
+    /* CSS Variables & Reset */
+    :root {
+      --bg: #ffffff;
+      --text: #222222;
+      --subtle: #666666;
+      --accent: #0066ff;
+      --surface: #f3f6f9;
+      --radius: 12px;
+      --transition: 0.3s ease;
+    }
+    body.dark {
+      --bg: #1e1e1e;
+      --text: #e0e0e0;
+      --subtle: #aaaaaa;
+      --accent: #3399ff;
+      --surface: #121212;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--surface);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background var(--transition), color var(--transition);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    img { max-width: 100%; display: block; border-radius: 0; }
 
-- 🌱 I’m currently both a student and a part-time engineer.
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      width: 50px;
+      height: 25px;
+      background: var(--bg);
+      border-radius: 999px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      transition: background var(--transition);
+    }
+    .theme-toggle .thumb {
+      width: 18px;
+      height: 18px;
+      background: var(--accent);
+      border-radius: 50%;
+      transition: transform var(--transition);
+    }
+    body.dark .theme-toggle .thumb {
+      transform: translateX(25px);
+    }
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+      animation: fadeInUp 0.8s ease;
+    }
 
-<a href="https://www.linkedin.com/in/erendurucan/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="alperen-albayrak" height="30" width="40" /></a>
-</p>
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeInUp 0.6s ease forwards; opacity: 0; }
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a> <a href="https://devdocs.io/c/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="bash" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://flutter.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://www.tutorialspoint.com/vlsi_design/vlsi_design_verilog_introduction.htm#:~:text=Verilog%20is%20a%20HARDWARE%20DESCRIPTION,digital%20hardware%20at%20any%20level." target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/56430787/105164182-1afa8a80-5b15-11eb-8ac3-7ae5c9f0e15e.png" alt="react" width="40" height="40"/> </a> <a href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="react" width="40" height="40"/> </p>
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--accent), #0099ff);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: fadeInUp 0.8s ease;
+    }
+    header h3 {
+      font-size: 1.3rem;
+      color: var(--subtle);
+      margin-top: 0.5rem;
+      animation: fadeInUp 0.8s ease 0.2s;
+    }
 
-#
+    hr { border: none; border-top: 1px solid #e0e0e0; margin: 2rem 0; background: transparent; }
 
-[![](https://visitcount.itsvg.in/api?id=erendrcnn&label=Profile%20Views&color=5&icon=5&pretty=false)](https://github.com/erendrcnn)
+    /* Info List */
+    .info-list {
+      list-style: none;
+      margin-bottom: 2rem;
+      display: grid;
+      gap: 1rem;
+    }
+    .info-list li {
+      display: flex;
+      align-items: center;
+      background: var(--bg);
+      padding: 1rem;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+    }
+    .info-list li:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .info-list li img.inline-icon {
+      margin-left: auto;
+      width: 50px;
+      filter: grayscale(50%);
+      transition: filter var(--transition);
+    }
+    .info-list li:hover img.inline-icon { filter: none; }
+
+    /* Social Links */
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .social a {
+      width: 48px;
+      height: 48px;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+    }
+    .social a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    /* Tools Grid */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+      gap: 1.5rem;
+      justify-items: center;
+      margin-bottom: 2rem;
+    }
+    .tools-grid a {
+      width: 70px;
+      height: 70px;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+      border-radius: 0;
+    }
+    .tools-grid a:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .tools-grid img { width: 40px; height: 40px; filter: grayscale(30%); transition: filter var(--transition); }
+    .tools-grid a:hover img { filter: none; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      color: var(--subtle);
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e0e0e0;
+      transition: color var(--transition), border-color var(--transition);
+    }
+  </style>
+</head>
+<body>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <div class="thumb"></div>
+  </div>
+  <div class="container">
+    <header>
+      <h1 class="fade-in">Hi, I’m Eren Durucan</h1>
+      <h3 class="fade-in delay-1">Computer Engineer | Passionate about Continuous Learning and Growth</h3>
+    </header>
+
+    <hr />
+
+    <section>
+      <ul class="info-list">
+        <li class="fade-in delay-2">
+          <span>🎓 Dedicated to ongoing personal development, the individual has earned a degree in computer science.</span>
+        </li>
+        <li class="fade-in delay-3">
+          <span>👨‍💻 Junior Software Developer at  ‎ ‎</span>
+          <a href="https://www.milsoft.com.tr/" target="_blank" rel="noreferrer">
+            <img class="inline-icon" src="https://media.licdn.com/dms/image/v2/D4D0BAQEwhpqizOKlaA/company-logo_200_200/B4DZVf2y0PGkAI-/0/1741069954749/milsoft_yaz_l_m_teknolojileri_a__logo?e=2147483647&v=beta&t=D6TzoecMAKWk6DEY9SyVsEnK6GNC3u3ZdFiXzY4Okos" alt="MilSoft" />
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section>
+      <h3 class="fade-in">Connect with me:</h3>
+      <div class="social fade-in delay-1">
+        <a href="https://www.linkedin.com/in/erendurucan/" target="_blank" aria-label="LinkedIn">
+          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" />
+        </a>
+        <a href="http://merendurucan.web.app/" target="_blank" aria-label="Website">
+          <img src="https://github.com/erendrcnn/erendrcnn/assets/70805475/aa618df3-75d4-468c-87e6-935dd7e19362" alt="Website" />
+        </a>
+      </div>
+    </section>
+
+    <hr />
+
+    <section>
+      <h3 class="fade-in">Languages and Tools:</h3>
+      <div class="tools-grid fade-in delay-2">
+        <a href="https://www.arduino.cc/" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="Arduino" /></a>
+        <a href="https://devdocs.io/c/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Language" /></a>
+        <a href="https://devdocs.io/cpp/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/cplusplus/cplusplus-original.svg" alt="C++" /></a>
+        <a href="https://developer.nvidia.com/cuda-zone" target="_blank"><img src="https://github.com/user-attachments/assets/4eac79b4-548d-43b3-a187-91cc500db7a3" alt="CUDA" /></a>
+        <a href="https://firebase.google.com/" target="_blank"><img src="https://github.com/user-attachments/assets/a1aff6bf-7db4-4868-aa19-1e60f7f83baa" alt="Firebase" /></a>
+        <a href="https://flutter.dev" target="_blank"><img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="Flutter" /></a>
+        <a href="https://git-scm.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" /></a>
+        <a href="https://www.java.com" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" /></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" /></a>
+        <a href="https://www.linux.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" /></a>
+        <a href="https://www.python.org" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" /></a>
+        <a href="https://www.djangoproject.com" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/django/django-plain.svg" alt="Django" /></a>
+        <a href="https://numpy.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg" alt="NumPy" /></a>
+        <a href="https://opencv.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/opencv/opencv-original.svg" alt="OpenCV" /></a>
+        <a href="https://pandas.pydata.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg" alt="Pandas" /></a>
+        <a href="https://www.tensorflow.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" /></a>
+        <a href="https://reactjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" /></a>
+        <a href="https://www.tutorialspoint.com/vlsi_design/vlsi_design_verilog_introduction.htm" target="_blank"><img src="https://user-images.githubusercontent.com/56430787/105164182-1afa8a80-5b15-11eb-8ac3-7ae5c9f0e15e.png" alt="Verilog" /></a>
+        <a href="https://www.mathworks.com/products/matlab.html" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="MATLAB" /></a>
+        <a href="https://www.mysql.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" /></a>
+        <a href="https://www.postgresql.org/" target="_blank"><img src="https://github.com/user-attachments/assets/64761fee-565a-400c-ad15-668e657de444" alt="PostgreSQL" /></a>
+        <a href="https://www.uipath.com" target="_blank"><img src="https://github.com/user-attachments/assets/2604e7ec-48ee-4875-955b-ec6b0d636aad" alt="UiPath" /></a>
+        <a href="https://www.docker.com" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker" /></a>
+      </div>
+    </section>
+
+
+    <footer class="fade-in delay-3">
+      <p>Page views: <img src="https://komarev.com/ghpvc/?username=erendrcnn&abbreviated=true&color=0d58d1" alt="Page views" /></p>
+    </footer>
+  </div>
+
+  <script>
+    // Theme toggle logic
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    // Initialize theme on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark');
+      }
+    });
+  </script>
+</body>
+</html>
