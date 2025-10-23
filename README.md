@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Eren Durucan</h1>
-<h3 align="center">TOBB ETÜ Computer Engineering Graduate | Full‑Stack & Data Science</h3>
+<h3 align="center">Full‑Stack & Data Science | TOBB ETÜ Computer Engineering Graduate</h3>
 
-<p align="center">Building user‑centric applications and data‑driven solutions. Open to entry‑level roles.</p>
+<p align="center">Building user‑centric applications and data‑driven solutions.</p>
 
 ---
 
